@@ -57,6 +57,7 @@ usage: |-
 include:
   - "docs/terraform.md"
 
+funded_by_cdr: true
 # Contributors to this project
 contributors:
   - name: "Abel Luck"

@@ -216,6 +216,17 @@ projects][gitlab] and [non-ops projects][nonops], follow us on
 
 
 
+**This project is also funded by the [Center for Digital Resilience][cdr].**
+
+[<img src="https://gitlab.com/digiresilience/web/digiresilience.org/-/raw/master/assets/images/cdr-logo-small-orange.png?inline=false"/>][website]
+
+CDR builds [resilient systems][cdr-tech] to keep civil society safe online and empowers
+activists to regain civic space. We offer a variety of digital wellness
+services through local partner organizations. Interested? [Email
+us][cdr-email].
+
+
+
 
 ### Contributors
 
