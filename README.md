@@ -44,7 +44,8 @@
 
 
 
-This is a terraform module that creates a lambda function that terminates instances older than a certain time and with certain tags.
+This is a terraform module that creates a lambda function that terminates
+instances older than a certain time and with certain tags.
 
 
 ---
