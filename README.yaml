@@ -1,0 +1,64 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: terraform-aws-lambda-instance-cleanup
+
+# Logo for this project
+#logo: docs/logo.png
+
+# License of this project
+license: "AGPL3"
+
+# Canonical GitLab repo
+gitlab_repo: guardianproject-ops/terraform-aws-lambda-instance-cleanup
+
+# Badges to display
+badges: []
+
+# Short description of this project
+description: |-
+  This is a terraform module that creates a lambda function that terminates instances older than a certain time and with certain tags.
+
+introduction: |-
+  Use this module to automatically terminate instances based on the criteria:
+
+  * region the instances are in
+  * tags the instances are tagged with
+  * age of the instances in minutes
+
+# How to use this project
+usage: |-
+
+  ```hcl
+  module "instance_cleanp" {
+    source          = "git::https://gitlab.com/guardianproject-ops/terraform-aws-lambda-instance-cleanup.git?ref=tags/0.1.0"
+
+    namespace       = var.namespace
+    name            = var.name
+    stage           = var.stage
+    delimiter       = var.delimiter
+    attributes      = ["instance-cleanup"]
+    tags            = var.tags
+    regions         = ["eu-central-1"]
+    schedule        = "rate(1 minute)"
+    max_age_minutes = 5
+    limit_tags      = {
+      "Namespace" = [var.namespace],
+      "Stage"     = [var.stage],
+      "CI"        = ["true"]
+    }
+  }
+  ```
+
+include:
+  - "docs/terraform.md"
+
+# Contributors to this project
+contributors:
+  - name: "Abel Luck"
+    gitlab: "abelxluck"
+    gravatar: 0f605397e0ead93a68e1be26dc26481a
