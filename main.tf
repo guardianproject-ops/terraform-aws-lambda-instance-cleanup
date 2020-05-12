@@ -72,7 +72,7 @@ data "aws_iam_policy_document" "lambda" {
       for_each = var.limit_tags
       content {
         test     = "StringEquals"
-        variable = "aws:RequestTag/${condition.key}"
+        variable = "ec2:ResourceTag/${condition.key}"
         values   = condition.value
       }
     }
