@@ -64,6 +64,7 @@ It's free and open source made available under the the [GNU Affero General Publi
 
 
 
+
 ## Introduction
 
 Use this module to automatically terminate instances based on the criteria:
@@ -72,17 +73,19 @@ Use this module to automatically terminate instances based on the criteria:
 * tags the instances are tagged with
 * age of the instances in minutes
 
+
+
 ## Usage
 
 
 **IMPORTANT:** The `master` branch is used in `source` just as an example. In your code, do not pin to `master` because there may be breaking changes between releases.
-Instead pin to the release tag (e.g. `?ref=tags/x.y.z`) of one of our [latest releases](https://gitlab.com/guardianproject-ops/terraform-aws-lambda-instance-cleanup/releases).
+Instead pin to the release tag (e.g. `?ref=tags/x.y.z`) of one of our [latest releases](https://gitlab.com/guardianproject-ops/terraform-aws-lambda-instance-cleanup/-/tags).
 
 
 
 ```hcl
 module "instance_cleanp" {
-  source          = "git::https://gitlab.com/guardianproject-ops/terraform-aws-lambda-instance-cleanup.git?ref=tags/0.1.0"
+  source          = "git::https://gitlab.com/guardianproject-ops/terraform-aws-lambda-instance-cleanup.git?ref=master"
 
   namespace       = var.namespace
   name            = var.name
@@ -207,7 +210,7 @@ All other trademarks referenced herein are the property of their respective owne
 
 **This project is maintained and funded by [The Guardian Project][website].**
 
-[<img src="https://gitlab.com/digiresilience/web/digiresilience.org/-/raw/master/assets/images/guardian-logo-256w.png?inline=false"/>][website]
+[<img src="https://gitlab.com/guardianproject/guardianprojectpublic/-/raw/master/Graphics/GuardianProject/pngs/logo-black-w256.png"/>][website]
 
 We're a [collective of designers and developers][website] focused on useable
 privacy and security. Everything we do is 100% FOSS. Check out out other [ops
@@ -217,14 +220,16 @@ projects][gitlab] and [non-ops projects][nonops], follow us on
 
 
 
+
 **This project is also funded by the [Center for Digital Resilience][cdr].**
 
-[<img src="https://gitlab.com/digiresilience/web/digiresilience.org/-/raw/master/assets/images/cdr-logo-small-orange.png?inline=false"/>][website]
+[<img src="https://gitlab.com/digiresilience/web/digiresilience.org/-/raw/master/assets/images/cdr-logo-gray-256w.png"/>][website]
 
 CDR builds [resilient systems][cdr-tech] to keep civil society safe online and empowers
 activists to regain civic space. We offer a variety of digital wellness
 services through local partner organizations. Interested? [Email
 us][cdr-email].
+
 
 
 

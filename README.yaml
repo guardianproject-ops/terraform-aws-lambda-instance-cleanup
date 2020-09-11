@@ -33,7 +33,7 @@ usage: |-
 
   ```hcl
   module "instance_cleanp" {
-    source          = "git::https://gitlab.com/guardianproject-ops/terraform-aws-lambda-instance-cleanup.git?ref=tags/0.1.0"
+    source          = "git::https://gitlab.com/guardianproject-ops/terraform-aws-lambda-instance-cleanup.git?ref=master"
 
     namespace       = var.namespace
     name            = var.name
